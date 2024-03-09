@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Person</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app424/style.css' %}">
+   
+</head>
+<body>
+    <h1>Add Person</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'list' %}">Go to person list</a>
+</body>
+</html>
